@@ -1,0 +1,8 @@
+{
+  "name": "msrumon/zepto-fullstack-assignment-1",
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  }
+}

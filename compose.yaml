@@ -1,0 +1,21 @@
+services:
+  app:
+    image: php:cli-alpine
+    working_dir: /root
+    volumes:
+      - .:/root
+    ports:
+      - 8081:8080
+    command:
+      - php
+      - --server
+      - 0.0.0.0:8080
+      - --docroot
+      - public
+  composer:
+    image: composer:lts
+    working_dir: /root
+    volumes:
+      - .:/root
+    entrypoint:
+      - composer
